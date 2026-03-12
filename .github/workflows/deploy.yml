@@ -24,6 +24,12 @@ jobs:
       env:
         FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     
+    - name: Debug - Verify secrets exist
+      run: |
+        if [ -z "${{ secrets.FTP_HOST }}" ]; then echo "❌ FTP_HOST is empty"; else echo "✅ FTP_HOST exists"; fi
+        if [ -z "${{ secrets.FTP_USER }}" ]; then echo "❌ FTP_USER is empty"; else echo "✅ FTP_USER exists"; fi
+        if [ -z "${{ secrets.FTP_PASS }}" ]; then echo "❌ FTP_PASS is empty"; else echo "✅ FTP_PASS exists"; fi
+    
     - name: Deploy to Namecheap via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
