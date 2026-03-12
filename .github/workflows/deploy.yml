@@ -1,0 +1,27 @@
+name: Deploy to Namecheap
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Deploy to Namecheap via SFTP
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      with:
+        username: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASS }}
+        server: ${{ secrets.FTP_HOST }}
+        local_path: './*'
+        remote_path: '/public_html/'
+        sftpArgs: '-o ConnectTimeout=5'
+        
+    - name: Deployment Status
+      run: echo "✅ Site deployed to Namecheap!"
