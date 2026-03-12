@@ -24,15 +24,21 @@ jobs:
       env:
         FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     
-    - name: Deploy to Namecheap via SFTP
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+    - name: Deploy to Namecheap via FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.3.5
       with:
+        server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASS }}
-        server: ${{ secrets.FTP_HOST }}
-        local_path: './*'
-        remote_path: '/public_html/'
-        sftpArgs: '-o ConnectTimeout=5'
+        local-dir: './'
+        server-dir: '/public_html/'
+        protocol: 'ftp'
+        port: 21
         
     - name: Deployment Status
-      run: echo "✅ Site deployed to Namecheap!"
+      if: success()
+      run: echo "✅ Site deployed to Namecheap via FTP!"
+    
+    - name: Deployment Failed
+      if: failure()
+      run: echo "❌ Deployment failed - check FTP credentials and connectivity"
