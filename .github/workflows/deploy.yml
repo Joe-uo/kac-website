@@ -37,7 +37,7 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASS }}
         local-dir: './'
-        server-dir: '/public_html/'
+        server-dir: '/kindandcompassionatecare.com/jofoma/public_html/'
         protocol: 'ftp'
         port: 21
         
