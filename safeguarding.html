@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Safeguarding - Benigna Healthcare</title>
+		<title>Safeguarding - KAC Care</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -26,7 +26,7 @@
 							<li><a href="services.html">Services</a></li>
 							<li><a href="referrals.html">Referrals</a></li>
 							<li class="current"><a href="safeguarding.html">Safeguarding</a></li>
-							<li><a href="contact.html" class="button primary">Feedback</a></li>
+							<li><a href="contact.html" class="button primary">Contact Us</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -93,7 +93,7 @@
 									</header>
 									<ul style="margin-left: 20px; margin-bottom: 1em;">
 										<li><strong>Direct Contact:</strong> Speak to any member of our team immediately</li>
-										<li><strong>Feedback Form:</strong> Use our confidential feedback form at <a href="contact.html">contact.html</a></li>
+										<li><strong>Feedback Form:</strong> Use our confidential feedback form below</newString>
 										<li><strong>Phone:</strong> Call our safeguarding team directly (contact details available on request)</li>
 										<li><strong>Email:</strong> Send confidential reports to our safeguarding lead</li>
 										<li><strong>External Authorities:</strong> Contact local safeguarding boards or CQC directly</li>
@@ -120,7 +120,7 @@
 									<h3 style="text-align: center; margin-top: 1em;">Report Concerns</h3>
 									<p style="text-align: center;">Do not hesitate to report any safeguarding concerns. We take all reports seriously.</p>
 									<ul class="buttons" style="text-align: center;">
-										<li><a href="contact.html" class="button fit">Submit Report</a></li>
+										<li><a href="#report-form" class="button fit">Submit Report</a></li>
 									</ul>
 								</div>
 							</div>
@@ -206,8 +206,65 @@
 
 								<footer class="major">
 									<ul class="buttons">
-										<li><a href="contact.html" class="button primary">Report a Concern</a></li>
 										<li><a href="about.html" class="button">Learn More About Us</a></li>
+									</ul>
+								</footer>
+
+						</section>
+
+					<!-- Feedback / Report Form -->
+						<section id="report-form" class="wrapper style4 special container medium">
+
+							<header class="major">
+								<span class="icon solid fa-exclamation-triangle" style="font-size: 2em; color: #e74c3c;"></span>
+								<h2>Submit a <strong>Report or Feedback</strong></h2>
+								<p>Use this form to report a safeguarding concern, make a complaint, or share feedback. All submissions are handled confidentially and with the utmost priority.</p>
+							</header>
+
+							<div class="content">
+								<form>
+									<div class="row gtr-50">
+										<div class="col-6 col-12-mobile">
+											<input type="text" name="name" placeholder="Name *" required />
+										</div>
+										<div class="col-6 col-12-mobile">
+											<input type="email" name="email" placeholder="Email *" required />
+										</div>
+										<div class="col-12">
+											<select name="feedback_type" style="width: 100%; padding: 0.75em; border: solid 1px #cccccc; border-radius: 0.25em;" required>
+												<option value="">Select Report Type *</option>
+												<option value="feedback">Feedback</option>
+												<option value="complaint">Complaint</option>
+												<option value="safeguarding">Safeguarding Concern</option>
+											</select>
+										</div>
+										<div class="col-12">
+											<input type="text" name="subject" placeholder="Subject *" required />
+										</div>
+										<div class="col-12">
+											<textarea name="message" placeholder="Your Message *" rows="7" required></textarea>
+										</div>
+										<div class="col-12">
+											<label>
+												<input type="checkbox" name="confidential" /> I would like this to be handled confidentially
+											</label>
+										</div>
+										<div class="col-12">
+											<ul class="buttons">
+												<li><input type="submit" class="special" value="Submit Report" /></li>
+												<li><input type="reset" value="Clear Form" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+
+								<div style="margin-top: 3em; padding-top: 2em; border-top: solid 1px #cccccc;">
+									<h3>Important Information</h3>
+									<p><strong>Safeguarding Concerns:</strong> Select "Safeguarding Concern" so your report is handled with the utmost priority and confidentiality. For urgent matters, please contact us directly.</p>
+									<p><strong>Complaints:</strong> We take all complaints seriously. A member of our team will be in touch within 3–5 business days.</p>
+									<p><strong>Confidentiality:</strong> All submissions are handled professionally. Your identity will be protected unless you indicate otherwise.</p>
+								</div>
+							</div>
 
 						</section>
 
@@ -229,7 +286,7 @@
 											</header>
 											<p>If you have concerns about your care or support, or if you're worried about someone else, please reach out to us immediately. We're here to listen and help.</p>
 											<ul class="buttons" style="margin-top: auto;">
-												<li><a href="contact.html" class="button fit">Get Support</a></li>
+												<li><a href="#report-form" class="button fit">Get Support</a></li>
 											</ul>
 										</section>
 
@@ -245,7 +302,7 @@
 											<strong>CQC:</strong> Register concerns about regulated services<br/>
 											<strong>Local Safeguarding Board:</strong> Multi-agency safeguarding coordination</p>
 											<ul class="buttons" style="margin-top: auto;">
-												<li><a href="contact.html" class="button fit">Provide Feedback</a></li>
+												<li><a href="#report-form" class="button fit">Provide Feedback</a></li>
 											</ul>
 										</section>
 
