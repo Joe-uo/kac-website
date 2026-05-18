@@ -20,7 +20,7 @@
 			var btn = form.querySelector('[type="submit"]');
 			var original = btn.value;
 			btn.disabled = true;
-			btn.value = 'Submitting…';
+			btn.value = 'Submitting...';
 
 			fetch(form.action, {
 				method: 'POST',
