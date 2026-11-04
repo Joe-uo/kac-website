@@ -7,8 +7,6 @@ env:
 on:
   push:
     branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
 
 jobs:
   deploy:
@@ -38,8 +36,16 @@ jobs:
         password: ${{ secrets.FTP_PASS }}
         local-dir: './'
         server-dir: '/public_html/'
-        protocol: 'ftp'
+        protocol: 'ftps'
         port: 21
+        timeout: 120000
+        log-level: verbose
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/.idea/**
+          **/.claude/**
+          **/node_modules/**
         
     - name: Deployment Status
       if: success()
